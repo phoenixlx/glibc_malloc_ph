@@ -80,7 +80,7 @@ if size < get_max_fast() //如果size小于fastbin的最大大小
             goto errout
             
         p->fd = *fb;    //插在链表头部，因为取也在头部取，所以实际是一个LIFO链表
-        *fb =p;         //！！！需要修改处1！！！
+        *fb =p;         
     #endif
 //这里处理完了所有大小处于fast bin之间的chunk
 
